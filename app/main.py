@@ -12,7 +12,19 @@ def get_data(url):
     data = soup.find('span', {'class': 'value colorize-server-side'}).text[:-1]
     return data
     
-
+    
+# генерация совета
+def get_advice(url):
+    temp = int(get_data(url))
+    if temp <= -6:
+        predict = 'Думаю, сегодня точно стоит надеть шапку'
+    elif temp <= -2:
+        predict = 'Пока терпимо, но тут уже смотри сам'
+    else:
+        predict = 'Тепло! Можно походить без шапочки ;)'
+    return predict
+    
+    
 # генерация кнопочного меню в чате и отправка приветствия
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -35,6 +47,7 @@ def func(message):
         bot.send_message(message.chat.id, text='Извини. Пока мало компетенций для совета по другим городам :(')
     else:
         bot.send_message(message.chat.id, text="Не понял тебя. Выбери город из меню и все будет чики-пуки")
+
 
 bot.polling(none_stop=True)
 
