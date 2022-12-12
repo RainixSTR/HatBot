@@ -2,6 +2,12 @@
 
 Телеграмм бот, который выдает совет о необходимости ношения шапки в данный момент времени
 
+## Тесты
+
+Main branch tests: [![tests pass status](https://github.com/RainixSTR/HatBot/actions/workflows/test_pipeline.yml/badge.svg?branch=main)](https://https://github.com/RainixSTR/HatBot/actions/workflows/test_pipeline.yml)
+
+Develop branch tests: [![tests pass status](https://github.com/RainixSTR/HatBot/actions/workflows/test_pipeline.yml/badge.svg?branch=develop)](https://github.com/RainixSTR/HatBot/actions/workflows/test_pipeline.yml)
+
 ## Запуск проекта
 - Для начала требуется склонировать репозиторий:
 
